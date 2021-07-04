@@ -69,12 +69,15 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             // btnAddCaixas
             // 
+            this.btnAddCaixas.BackColor = System.Drawing.Color.White;
+            this.btnAddCaixas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddCaixas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCaixas.Location = new System.Drawing.Point(129, 659);
             this.btnAddCaixas.Name = "btnAddCaixas";
-            this.btnAddCaixas.Size = new System.Drawing.Size(56, 22);
+            this.btnAddCaixas.Size = new System.Drawing.Size(104, 26);
             this.btnAddCaixas.TabIndex = 144;
-            this.btnAddCaixas.Text = "Video";
-            this.btnAddCaixas.UseVisualStyleBackColor = true;
+            this.btnAddCaixas.Text = "Carregar Video";
+            this.btnAddCaixas.UseVisualStyleBackColor = false;
             this.btnAddCaixas.Click += new System.EventHandler(this.btnAddCaixas_Click);
             // 
             // lbl1
@@ -91,24 +94,30 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             // btnPause1
             // 
+            this.btnPause1.BackColor = System.Drawing.Color.White;
+            this.btnPause1.FlatAppearance.BorderSize = 0;
+            this.btnPause1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPause1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPause1.Location = new System.Drawing.Point(544, 661);
+            this.btnPause1.Location = new System.Drawing.Point(792, 659);
             this.btnPause1.Name = "btnPause1";
             this.btnPause1.Size = new System.Drawing.Size(72, 22);
             this.btnPause1.TabIndex = 141;
             this.btnPause1.Text = "Pause";
-            this.btnPause1.UseVisualStyleBackColor = true;
+            this.btnPause1.UseVisualStyleBackColor = false;
             this.btnPause1.Click += new System.EventHandler(this.btnPause1_Click);
             // 
             // btnStop1
             // 
+            this.btnStop1.BackColor = System.Drawing.Color.White;
+            this.btnStop1.FlatAppearance.BorderSize = 0;
+            this.btnStop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStop1.Location = new System.Drawing.Point(622, 661);
+            this.btnStop1.Location = new System.Drawing.Point(870, 659);
             this.btnStop1.Name = "btnStop1";
             this.btnStop1.Size = new System.Drawing.Size(72, 22);
             this.btnStop1.TabIndex = 140;
             this.btnStop1.Text = "Stop";
-            this.btnStop1.UseVisualStyleBackColor = true;
+            this.btnStop1.UseVisualStyleBackColor = false;
             this.btnStop1.Visible = false;
             this.btnStop1.Click += new System.EventHandler(this.btnStop1_Click);
             // 
@@ -130,7 +139,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             this.lblRealTime1.AutoSize = true;
             this.lblRealTime1.ForeColor = System.Drawing.Color.White;
-            this.lblRealTime1.Location = new System.Drawing.Point(857, 666);
+            this.lblRealTime1.Location = new System.Drawing.Point(1105, 664);
             this.lblRealTime1.Name = "lblRealTime1";
             this.lblRealTime1.Size = new System.Drawing.Size(21, 13);
             this.lblRealTime1.TabIndex = 134;
@@ -138,23 +147,29 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             // btnAvX1
             // 
-            this.btnAvX1.Location = new System.Drawing.Point(778, 661);
+            this.btnAvX1.BackColor = System.Drawing.Color.White;
+            this.btnAvX1.FlatAppearance.BorderSize = 0;
+            this.btnAvX1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAvX1.Location = new System.Drawing.Point(1026, 659);
             this.btnAvX1.Name = "btnAvX1";
             this.btnAvX1.Size = new System.Drawing.Size(29, 22);
             this.btnAvX1.TabIndex = 133;
             this.btnAvX1.Text = ">>";
-            this.btnAvX1.UseVisualStyleBackColor = true;
+            this.btnAvX1.UseVisualStyleBackColor = false;
             this.btnAvX1.Click += new System.EventHandler(this.btnAvX1_Click);
             // 
             // btnPlay1
             // 
+            this.btnPlay1.BackColor = System.Drawing.Color.White;
+            this.btnPlay1.FlatAppearance.BorderSize = 0;
+            this.btnPlay1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay1.Location = new System.Drawing.Point(466, 661);
+            this.btnPlay1.Location = new System.Drawing.Point(714, 659);
             this.btnPlay1.Name = "btnPlay1";
             this.btnPlay1.Size = new System.Drawing.Size(72, 22);
             this.btnPlay1.TabIndex = 139;
             this.btnPlay1.Text = "Play";
-            this.btnPlay1.UseVisualStyleBackColor = true;
+            this.btnPlay1.UseVisualStyleBackColor = false;
             this.btnPlay1.Click += new System.EventHandler(this.btnPlay1_Click);
             // 
             // label1
@@ -179,32 +194,41 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             // btnRetroX1
             // 
-            this.btnRetroX1.Location = new System.Drawing.Point(743, 661);
+            this.btnRetroX1.BackColor = System.Drawing.Color.White;
+            this.btnRetroX1.FlatAppearance.BorderSize = 0;
+            this.btnRetroX1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRetroX1.Location = new System.Drawing.Point(991, 659);
             this.btnRetroX1.Name = "btnRetroX1";
             this.btnRetroX1.Size = new System.Drawing.Size(29, 22);
             this.btnRetroX1.TabIndex = 132;
             this.btnRetroX1.Text = "<<";
-            this.btnRetroX1.UseVisualStyleBackColor = true;
+            this.btnRetroX1.UseVisualStyleBackColor = false;
             this.btnRetroX1.Click += new System.EventHandler(this.btnRetroX1_Click);
             // 
             // btnNext1
             // 
-            this.btnNext1.Location = new System.Drawing.Point(813, 661);
+            this.btnNext1.BackColor = System.Drawing.Color.White;
+            this.btnNext1.FlatAppearance.BorderSize = 0;
+            this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext1.Location = new System.Drawing.Point(1061, 659);
             this.btnNext1.Name = "btnNext1";
             this.btnNext1.Size = new System.Drawing.Size(29, 22);
             this.btnNext1.TabIndex = 138;
             this.btnNext1.Text = ">>|";
-            this.btnNext1.UseVisualStyleBackColor = true;
+            this.btnNext1.UseVisualStyleBackColor = false;
             this.btnNext1.Click += new System.EventHandler(this.btnNext1_Click);
             // 
             // btnPrev1
             // 
-            this.btnPrev1.Location = new System.Drawing.Point(708, 661);
+            this.btnPrev1.BackColor = System.Drawing.Color.White;
+            this.btnPrev1.FlatAppearance.BorderSize = 0;
+            this.btnPrev1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrev1.Location = new System.Drawing.Point(956, 659);
             this.btnPrev1.Name = "btnPrev1";
             this.btnPrev1.Size = new System.Drawing.Size(29, 22);
             this.btnPrev1.TabIndex = 137;
             this.btnPrev1.Text = "|<<";
-            this.btnPrev1.UseVisualStyleBackColor = true;
+            this.btnPrev1.UseVisualStyleBackColor = false;
             this.btnPrev1.Click += new System.EventHandler(this.btnPrev1_Click);
             // 
             // lblTimeTotal1
@@ -270,7 +294,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(202, 666);
+            this.label2.Location = new System.Drawing.Point(313, 664);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 149;
@@ -279,27 +303,31 @@ namespace Trabalho_Camera_Caixa.Forms
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(238, 663);
+            this.dateTimePicker1.Location = new System.Drawing.Point(349, 661);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
             this.dateTimePicker1.TabIndex = 150;
             // 
             // btnBanco
             // 
+            this.btnBanco.BackColor = System.Drawing.Color.White;
+            this.btnBanco.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanco.Location = new System.Drawing.Point(336, 661);
+            this.btnBanco.ForeColor = System.Drawing.Color.Black;
+            this.btnBanco.Location = new System.Drawing.Point(447, 659);
             this.btnBanco.Name = "btnBanco";
-            this.btnBanco.Size = new System.Drawing.Size(91, 22);
+            this.btnBanco.Size = new System.Drawing.Size(110, 26);
             this.btnBanco.TabIndex = 151;
-            this.btnBanco.Text = "Carregar Banco";
-            this.btnBanco.UseVisualStyleBackColor = true;
+            this.btnBanco.Text = "Carregar Registros";
+            this.btnBanco.UseVisualStyleBackColor = false;
             this.btnBanco.Click += new System.EventHandler(this.btnBanco_Click);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1284, 711);
             this.Controls.Add(this.btnBanco);
             this.Controls.Add(this.dateTimePicker1);
@@ -325,9 +353,11 @@ namespace Trabalho_Camera_Caixa.Forms
             this.Controls.Add(this.mediaPlayer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmPrincipal";
+            this.Text = "Video";
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
