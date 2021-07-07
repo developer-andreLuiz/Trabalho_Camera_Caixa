@@ -30,6 +30,7 @@ namespace Trabalho_Camera_Caixa.Forms
         private static SpeechSynthesizer synthesizer = new SpeechSynthesizer();
         int volume = 100;
         int velocidade = 3;
+        string timeVerificado = string.Empty;
         #endregion
 
         #region Banco
@@ -427,18 +428,18 @@ namespace Trabalho_Camera_Caixa.Forms
         #region Sintese de Voz
         private void timerVoz_Tick(object sender, EventArgs e)
         {
-            if (mediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
-            {
-                foreach (var a in listaRegistros)
-                {
-                    if (lblTimeAtual1.Text.Equals(a.hora))
-                    {
-                        //StopFala();
-                        Falar(a.nome);
-                    }
-                }
+            //if (mediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            //{
+            //    foreach (var a in listaRegistros)
+            //    {
+            //        if (lblTimeAtual1.Text.Equals(a.hora))
+            //        {
+            //            //StopFala();
+            //            Falar(a.nome);
+            //        }
+            //    }
               
-            }
+            //}
 
         }
 
@@ -468,10 +469,26 @@ namespace Trabalho_Camera_Caixa.Forms
                 MessageBox.Show($"Nehum registro para esta data.", "Informação", MessageBoxButtons.OK);
             }
         }
-        #endregion
 
         #endregion
 
+        #endregion
 
+        private void lblTimeAtual1_TextChanged(object sender, EventArgs e)
+        {
+
+            if (mediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                foreach (var a in listaRegistros)
+                {
+                    if (lblTimeAtual1.Text.Equals(a.hora))
+                    {
+                        //StopFala();
+                        Falar(a.nome);
+                    }
+                }
+
+            }
+        }
     }
 }

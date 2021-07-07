@@ -64,7 +64,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.mediaPlayer1.Location = new System.Drawing.Point(0, 0);
             this.mediaPlayer1.Name = "mediaPlayer1";
             this.mediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mediaPlayer1.OcxState")));
-            this.mediaPlayer1.Size = new System.Drawing.Size(1285, 644);
+            this.mediaPlayer1.Size = new System.Drawing.Size(1785, 890);
             this.mediaPlayer1.TabIndex = 124;
             // 
             // btnAddCaixas
@@ -72,7 +72,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnAddCaixas.BackColor = System.Drawing.Color.White;
             this.btnAddCaixas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddCaixas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCaixas.Location = new System.Drawing.Point(129, 659);
+            this.btnAddCaixas.Location = new System.Drawing.Point(129, 908);
             this.btnAddCaixas.Name = "btnAddCaixas";
             this.btnAddCaixas.Size = new System.Drawing.Size(104, 26);
             this.btnAddCaixas.TabIndex = 144;
@@ -85,7 +85,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.Color.White;
             this.lbl1.ForeColor = System.Drawing.Color.Black;
-            this.lbl1.Location = new System.Drawing.Point(-1, 627);
+            this.lbl1.Location = new System.Drawing.Point(-1, 876);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(35, 13);
             this.lbl1.TabIndex = 142;
@@ -98,7 +98,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnPause1.FlatAppearance.BorderSize = 0;
             this.btnPause1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPause1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPause1.Location = new System.Drawing.Point(792, 659);
+            this.btnPause1.Location = new System.Drawing.Point(1297, 904);
             this.btnPause1.Name = "btnPause1";
             this.btnPause1.Size = new System.Drawing.Size(72, 22);
             this.btnPause1.TabIndex = 141;
@@ -112,7 +112,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnStop1.FlatAppearance.BorderSize = 0;
             this.btnStop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStop1.Location = new System.Drawing.Point(870, 659);
+            this.btnStop1.Location = new System.Drawing.Point(1375, 904);
             this.btnStop1.Name = "btnStop1";
             this.btnStop1.Size = new System.Drawing.Size(72, 22);
             this.btnStop1.TabIndex = 140;
@@ -123,11 +123,11 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 640);
+            this.progressBar1.Location = new System.Drawing.Point(0, 889);
             this.progressBar1.MarqueeAnimationSpeed = 9000000;
             this.progressBar1.Maximum = 1800;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(1285, 13);
+            this.progressBar1.Size = new System.Drawing.Size(1783, 13);
             this.progressBar1.Step = 1;
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 135;
@@ -139,7 +139,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             this.lblRealTime1.AutoSize = true;
             this.lblRealTime1.ForeColor = System.Drawing.Color.White;
-            this.lblRealTime1.Location = new System.Drawing.Point(1105, 664);
+            this.lblRealTime1.Location = new System.Drawing.Point(1610, 909);
             this.lblRealTime1.Name = "lblRealTime1";
             this.lblRealTime1.Size = new System.Drawing.Size(21, 13);
             this.lblRealTime1.TabIndex = 134;
@@ -150,7 +150,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnAvX1.BackColor = System.Drawing.Color.White;
             this.btnAvX1.FlatAppearance.BorderSize = 0;
             this.btnAvX1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAvX1.Location = new System.Drawing.Point(1026, 659);
+            this.btnAvX1.Location = new System.Drawing.Point(1566, 904);
             this.btnAvX1.Name = "btnAvX1";
             this.btnAvX1.Size = new System.Drawing.Size(29, 22);
             this.btnAvX1.TabIndex = 133;
@@ -164,7 +164,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnPlay1.FlatAppearance.BorderSize = 0;
             this.btnPlay1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay1.Location = new System.Drawing.Point(714, 659);
+            this.btnPlay1.Location = new System.Drawing.Point(1219, 904);
             this.btnPlay1.Name = "btnPlay1";
             this.btnPlay1.Size = new System.Drawing.Size(72, 22);
             this.btnPlay1.TabIndex = 139;
@@ -176,7 +176,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1209, 662);
+            this.label1.Location = new System.Drawing.Point(1714, 907);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(12, 13);
             this.label1.TabIndex = 136;
@@ -186,18 +186,19 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             this.lblTimeAtual1.AutoSize = true;
             this.lblTimeAtual1.ForeColor = System.Drawing.Color.White;
-            this.lblTimeAtual1.Location = new System.Drawing.Point(1154, 662);
+            this.lblTimeAtual1.Location = new System.Drawing.Point(1659, 907);
             this.lblTimeAtual1.Name = "lblTimeAtual1";
             this.lblTimeAtual1.Size = new System.Drawing.Size(49, 13);
             this.lblTimeAtual1.TabIndex = 130;
             this.lblTimeAtual1.Text = "00:00:00";
+            this.lblTimeAtual1.TextChanged += new System.EventHandler(this.lblTimeAtual1_TextChanged);
             // 
             // btnRetroX1
             // 
             this.btnRetroX1.BackColor = System.Drawing.Color.White;
             this.btnRetroX1.FlatAppearance.BorderSize = 0;
             this.btnRetroX1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRetroX1.Location = new System.Drawing.Point(991, 659);
+            this.btnRetroX1.Location = new System.Drawing.Point(1531, 904);
             this.btnRetroX1.Name = "btnRetroX1";
             this.btnRetroX1.Size = new System.Drawing.Size(29, 22);
             this.btnRetroX1.TabIndex = 132;
@@ -210,9 +211,11 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnNext1.BackColor = System.Drawing.Color.White;
             this.btnNext1.FlatAppearance.BorderSize = 0;
             this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext1.Location = new System.Drawing.Point(1061, 659);
+            this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnNext1.Location = new System.Drawing.Point(618, 911);
             this.btnNext1.Name = "btnNext1";
-            this.btnNext1.Size = new System.Drawing.Size(29, 22);
+            this.btnNext1.Size = new System.Drawing.Size(32, 22);
             this.btnNext1.TabIndex = 138;
             this.btnNext1.Text = ">>|";
             this.btnNext1.UseVisualStyleBackColor = false;
@@ -223,9 +226,11 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnPrev1.BackColor = System.Drawing.Color.White;
             this.btnPrev1.FlatAppearance.BorderSize = 0;
             this.btnPrev1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrev1.Location = new System.Drawing.Point(956, 659);
+            this.btnPrev1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrev1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnPrev1.Location = new System.Drawing.Point(574, 911);
             this.btnPrev1.Name = "btnPrev1";
-            this.btnPrev1.Size = new System.Drawing.Size(29, 22);
+            this.btnPrev1.Size = new System.Drawing.Size(38, 22);
             this.btnPrev1.TabIndex = 137;
             this.btnPrev1.Text = "|<<";
             this.btnPrev1.UseVisualStyleBackColor = false;
@@ -235,7 +240,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             this.lblTimeTotal1.AutoSize = true;
             this.lblTimeTotal1.ForeColor = System.Drawing.Color.White;
-            this.lblTimeTotal1.Location = new System.Drawing.Point(1227, 662);
+            this.lblTimeTotal1.Location = new System.Drawing.Point(1732, 907);
             this.lblTimeTotal1.Name = "lblTimeTotal1";
             this.lblTimeTotal1.Size = new System.Drawing.Size(49, 13);
             this.lblTimeTotal1.TabIndex = 131;
@@ -245,7 +250,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             this.lblTitulo1.AutoSize = true;
             this.lblTitulo1.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo1.Location = new System.Drawing.Point(1, 693);
+            this.lblTitulo1.Location = new System.Drawing.Point(1, 942);
             this.lblTitulo1.Name = "lblTitulo1";
             this.lblTitulo1.Size = new System.Drawing.Size(33, 13);
             this.lblTitulo1.TabIndex = 129;
@@ -254,7 +259,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(1306, -1);
+            this.listBox1.Location = new System.Drawing.Point(1806, 30);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(157, 693);
             this.listBox1.TabIndex = 145;
@@ -266,7 +271,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             // txtNumeroCamera
             // 
-            this.txtNumeroCamera.Location = new System.Drawing.Point(85, 661);
+            this.txtNumeroCamera.Location = new System.Drawing.Point(85, 910);
             this.txtNumeroCamera.Name = "txtNumeroCamera";
             this.txtNumeroCamera.Size = new System.Drawing.Size(38, 20);
             this.txtNumeroCamera.TabIndex = 146;
@@ -277,7 +282,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.lblNumeroCamera.AutoSize = true;
             this.lblNumeroCamera.BackColor = System.Drawing.Color.Transparent;
             this.lblNumeroCamera.ForeColor = System.Drawing.Color.White;
-            this.lblNumeroCamera.Location = new System.Drawing.Point(17, 664);
+            this.lblNumeroCamera.Location = new System.Drawing.Point(17, 913);
             this.lblNumeroCamera.Name = "lblNumeroCamera";
             this.lblNumeroCamera.Size = new System.Drawing.Size(61, 13);
             this.lblNumeroCamera.TabIndex = 147;
@@ -286,7 +291,6 @@ namespace Trabalho_Camera_Caixa.Forms
             // timerVoz
             // 
             this.timerVoz.Enabled = true;
-            this.timerVoz.Interval = 1000;
             this.timerVoz.Tick += new System.EventHandler(this.timerVoz_Tick);
             // 
             // label2
@@ -294,7 +298,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(313, 664);
+            this.label2.Location = new System.Drawing.Point(313, 913);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 149;
@@ -303,7 +307,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(349, 661);
+            this.dateTimePicker1.Location = new System.Drawing.Point(349, 910);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
             this.dateTimePicker1.TabIndex = 150;
@@ -315,7 +319,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanco.ForeColor = System.Drawing.Color.Black;
-            this.btnBanco.Location = new System.Drawing.Point(447, 659);
+            this.btnBanco.Location = new System.Drawing.Point(447, 908);
             this.btnBanco.Name = "btnBanco";
             this.btnBanco.Size = new System.Drawing.Size(110, 26);
             this.btnBanco.TabIndex = 151;
@@ -328,7 +332,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1284, 711);
+            this.ClientSize = new System.Drawing.Size(1784, 961);
             this.Controls.Add(this.btnBanco);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
@@ -353,6 +357,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.Controls.Add(this.mediaPlayer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.ShowIcon = false;
