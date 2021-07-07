@@ -29,7 +29,7 @@ namespace Trabalho_Camera_Caixa.Forms
         #region Sintese de Voz
         private static SpeechSynthesizer synthesizer = new SpeechSynthesizer();
         int volume = 100;
-        int velocidade = 3;
+        int velocidade = 4;
         string timeVerificado = string.Empty;
         #endregion
 
@@ -483,7 +483,7 @@ namespace Trabalho_Camera_Caixa.Forms
                 {
                     if (lblTimeAtual1.Text.Equals(a.hora))
                     {
-                        //StopFala();
+                        StopFala();
                         Falar(a.nome);
                     }
                 }
