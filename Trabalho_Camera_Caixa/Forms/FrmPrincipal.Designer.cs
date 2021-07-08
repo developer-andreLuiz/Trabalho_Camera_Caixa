@@ -51,11 +51,13 @@ namespace Trabalho_Camera_Caixa.Forms
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.txtNumeroCamera = new System.Windows.Forms.TextBox();
             this.lblNumeroCamera = new System.Windows.Forms.Label();
-            this.timerVoz = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnBanco = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.nUDTime = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDTime)).BeginInit();
             this.SuspendLayout();
             // 
             // mediaPlayer1
@@ -72,7 +74,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnAddCaixas.BackColor = System.Drawing.Color.White;
             this.btnAddCaixas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddCaixas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCaixas.Location = new System.Drawing.Point(129, 908);
+            this.btnAddCaixas.Location = new System.Drawing.Point(180, 910);
             this.btnAddCaixas.Name = "btnAddCaixas";
             this.btnAddCaixas.Size = new System.Drawing.Size(104, 26);
             this.btnAddCaixas.TabIndex = 144;
@@ -213,7 +215,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnNext1.Location = new System.Drawing.Point(618, 911);
+            this.btnNext1.Location = new System.Drawing.Point(668, 912);
             this.btnNext1.Name = "btnNext1";
             this.btnNext1.Size = new System.Drawing.Size(32, 22);
             this.btnNext1.TabIndex = 138;
@@ -228,7 +230,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnPrev1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPrev1.Location = new System.Drawing.Point(574, 911);
+            this.btnPrev1.Location = new System.Drawing.Point(624, 912);
             this.btnPrev1.Name = "btnPrev1";
             this.btnPrev1.Size = new System.Drawing.Size(38, 22);
             this.btnPrev1.TabIndex = 137;
@@ -271,9 +273,10 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             // txtNumeroCamera
             // 
-            this.txtNumeroCamera.Location = new System.Drawing.Point(85, 910);
+            this.txtNumeroCamera.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroCamera.Location = new System.Drawing.Point(116, 910);
             this.txtNumeroCamera.Name = "txtNumeroCamera";
-            this.txtNumeroCamera.Size = new System.Drawing.Size(38, 20);
+            this.txtNumeroCamera.Size = new System.Drawing.Size(38, 26);
             this.txtNumeroCamera.TabIndex = 146;
             this.txtNumeroCamera.Text = "1";
             // 
@@ -281,35 +284,33 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             this.lblNumeroCamera.AutoSize = true;
             this.lblNumeroCamera.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumeroCamera.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumeroCamera.ForeColor = System.Drawing.Color.White;
             this.lblNumeroCamera.Location = new System.Drawing.Point(17, 913);
             this.lblNumeroCamera.Name = "lblNumeroCamera";
-            this.lblNumeroCamera.Size = new System.Drawing.Size(61, 13);
+            this.lblNumeroCamera.Size = new System.Drawing.Size(83, 19);
             this.lblNumeroCamera.TabIndex = 147;
             this.lblNumeroCamera.Text = "Camera 1-4\r\n";
-            // 
-            // timerVoz
-            // 
-            this.timerVoz.Enabled = true;
-            this.timerVoz.Tick += new System.EventHandler(this.timerVoz_Tick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(313, 913);
+            this.label2.Location = new System.Drawing.Point(311, 913);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(38, 19);
             this.label2.TabIndex = 149;
             this.label2.Text = "Data";
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(349, 910);
+            this.dateTimePicker1.Location = new System.Drawing.Point(355, 910);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(92, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(92, 26);
             this.dateTimePicker1.TabIndex = 150;
             // 
             // btnBanco
@@ -319,7 +320,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnBanco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanco.ForeColor = System.Drawing.Color.Black;
-            this.btnBanco.Location = new System.Drawing.Point(447, 908);
+            this.btnBanco.Location = new System.Drawing.Point(468, 910);
             this.btnBanco.Name = "btnBanco";
             this.btnBanco.Size = new System.Drawing.Size(110, 26);
             this.btnBanco.TabIndex = 151;
@@ -327,12 +328,44 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnBanco.UseVisualStyleBackColor = false;
             this.btnBanco.Click += new System.EventHandler(this.btnBanco_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(766, 913);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 19);
+            this.label3.TabIndex = 153;
+            this.label3.Text = "Compensação";
+            // 
+            // nUDTime
+            // 
+            this.nUDTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nUDTime.Location = new System.Drawing.Point(868, 910);
+            this.nUDTime.Maximum = new decimal(new int[] {
+            600,
+            0,
+            0,
+            0});
+            this.nUDTime.Minimum = new decimal(new int[] {
+            600,
+            0,
+            0,
+            -2147483648});
+            this.nUDTime.Name = "nUDTime";
+            this.nUDTime.Size = new System.Drawing.Size(70, 26);
+            this.nUDTime.TabIndex = 154;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1784, 961);
+            this.Controls.Add(this.nUDTime);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBanco);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
@@ -364,6 +397,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Video";
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDTime)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,9 +425,10 @@ namespace Trabalho_Camera_Caixa.Forms
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TextBox txtNumeroCamera;
         private System.Windows.Forms.Label lblNumeroCamera;
-        private System.Windows.Forms.Timer timerVoz;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnBanco;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown nUDTime;
     }
 }

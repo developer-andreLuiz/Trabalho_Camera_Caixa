@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Speech.Synthesis;
@@ -26,6 +27,7 @@ namespace Trabalho_Camera_Caixa.Forms
         int valor1;
         int realTime1 = 1;
         #endregion
+
         #region Sintese de Voz
         private static SpeechSynthesizer synthesizer = new SpeechSynthesizer();
         int volume = 100;
@@ -180,8 +182,17 @@ namespace Trabalho_Camera_Caixa.Forms
         {
             synthesizer.SpeakAsyncCancelAll();
         }
+
+        string RetornoTime(string txt)
+        {
+            string retorno = txt;
+            DateTime time = DateTime.Parse("01/01/2000" + " " + txt);
+            int valor = Convert.ToInt32(nUDTime.Value);
+            retorno = time.AddSeconds(valor).ToLongTimeString();
+            return retorno;
+        }
         #endregion
-        
+
         #region Banco
         #endregion
 
@@ -424,28 +435,24 @@ namespace Trabalho_Camera_Caixa.Forms
             }
         }
         #endregion
-        
+
         #region Sintese de Voz
-        private void timerVoz_Tick(object sender, EventArgs e)
+        private void lblTimeAtual1_TextChanged(object sender, EventArgs e)
         {
-            //if (mediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
-            //{
-            //    foreach (var a in listaRegistros)
-            //    {
-            //        if (lblTimeAtual1.Text.Equals(a.hora))
-            //        {
-            //            //StopFala();
-            //            Falar(a.nome);
-            //        }
-            //    }
-              
-            //}
 
+            if (mediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
+            {
+                foreach (var a in listaRegistros)
+                {
+                    if (RetornoTime(lblTimeAtual1.Text).Equals(a.hora))
+                    {
+                        StopFala();
+                        Falar(a.nome);
+                    }
+                }
+
+            }
         }
-
-
-
-
         #endregion
 
         #region Banco
@@ -470,25 +477,12 @@ namespace Trabalho_Camera_Caixa.Forms
             }
         }
 
-        #endregion
 
         #endregion
 
-        private void lblTimeAtual1_TextChanged(object sender, EventArgs e)
-        {
+        #endregion
 
-            if (mediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
-            {
-                foreach (var a in listaRegistros)
-                {
-                    if (lblTimeAtual1.Text.Equals(a.hora))
-                    {
-                        StopFala();
-                        Falar(a.nome);
-                    }
-                }
-
-            }
-        }
+       
+       
     }
 }
