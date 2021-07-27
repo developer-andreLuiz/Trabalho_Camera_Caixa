@@ -49,15 +49,22 @@ namespace Trabalho_Camera_Caixa.Forms
             this.lblTitulo1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.txtNumeroCamera = new System.Windows.Forms.TextBox();
             this.lblNumeroCamera = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnBanco = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.nUDTime = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.rbRede = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbLocal = new System.Windows.Forms.RadioButton();
+            this.nUDVoz = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVoz)).BeginInit();
             this.SuspendLayout();
             // 
             // mediaPlayer1
@@ -74,7 +81,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnAddCaixas.BackColor = System.Drawing.Color.White;
             this.btnAddCaixas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddCaixas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCaixas.Location = new System.Drawing.Point(180, 910);
+            this.btnAddCaixas.Location = new System.Drawing.Point(121, 912);
             this.btnAddCaixas.Name = "btnAddCaixas";
             this.btnAddCaixas.Size = new System.Drawing.Size(104, 26);
             this.btnAddCaixas.TabIndex = 144;
@@ -100,7 +107,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnPause1.FlatAppearance.BorderSize = 0;
             this.btnPause1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPause1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPause1.Location = new System.Drawing.Point(1297, 904);
+            this.btnPause1.Location = new System.Drawing.Point(1330, 904);
             this.btnPause1.Name = "btnPause1";
             this.btnPause1.Size = new System.Drawing.Size(72, 22);
             this.btnPause1.TabIndex = 141;
@@ -114,7 +121,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnStop1.FlatAppearance.BorderSize = 0;
             this.btnStop1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStop1.Location = new System.Drawing.Point(1375, 904);
+            this.btnStop1.Location = new System.Drawing.Point(1408, 904);
             this.btnStop1.Name = "btnStop1";
             this.btnStop1.Size = new System.Drawing.Size(72, 22);
             this.btnStop1.TabIndex = 140;
@@ -166,7 +173,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnPlay1.FlatAppearance.BorderSize = 0;
             this.btnPlay1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay1.Location = new System.Drawing.Point(1219, 904);
+            this.btnPlay1.Location = new System.Drawing.Point(1252, 904);
             this.btnPlay1.Name = "btnPlay1";
             this.btnPlay1.Size = new System.Drawing.Size(72, 22);
             this.btnPlay1.TabIndex = 139;
@@ -215,7 +222,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnNext1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnNext1.Location = new System.Drawing.Point(668, 912);
+            this.btnNext1.Location = new System.Drawing.Point(848, 907);
             this.btnNext1.Name = "btnNext1";
             this.btnNext1.Size = new System.Drawing.Size(32, 22);
             this.btnNext1.TabIndex = 138;
@@ -230,7 +237,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.btnPrev1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrev1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrev1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnPrev1.Location = new System.Drawing.Point(624, 912);
+            this.btnPrev1.Location = new System.Drawing.Point(804, 907);
             this.btnPrev1.Name = "btnPrev1";
             this.btnPrev1.Size = new System.Drawing.Size(38, 22);
             this.btnPrev1.TabIndex = 137;
@@ -270,15 +277,6 @@ namespace Trabalho_Camera_Caixa.Forms
             // 
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // txtNumeroCamera
-            // 
-            this.txtNumeroCamera.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroCamera.Location = new System.Drawing.Point(116, 910);
-            this.txtNumeroCamera.Name = "txtNumeroCamera";
-            this.txtNumeroCamera.Size = new System.Drawing.Size(38, 26);
-            this.txtNumeroCamera.TabIndex = 146;
-            this.txtNumeroCamera.Text = "1";
             // 
             // lblNumeroCamera
             // 
@@ -334,7 +332,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(766, 913);
+            this.label3.Location = new System.Drawing.Point(886, 935);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 19);
             this.label3.TabIndex = 153;
@@ -343,7 +341,7 @@ namespace Trabalho_Camera_Caixa.Forms
             // nUDTime
             // 
             this.nUDTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nUDTime.Location = new System.Drawing.Point(868, 910);
+            this.nUDTime.Location = new System.Drawing.Point(901, 906);
             this.nUDTime.Maximum = new decimal(new int[] {
             600,
             0,
@@ -358,19 +356,121 @@ namespace Trabalho_Camera_Caixa.Forms
             this.nUDTime.Size = new System.Drawing.Size(70, 26);
             this.nUDTime.TabIndex = 154;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(977, 906);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(269, 21);
+            this.comboBox1.TabIndex = 155;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(1062, 930);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 19);
+            this.label4.TabIndex = 156;
+            this.label4.Text = "Funcionario";
+            // 
+            // rbRede
+            // 
+            this.rbRede.AutoSize = true;
+            this.rbRede.Checked = true;
+            this.rbRede.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbRede.ForeColor = System.Drawing.Color.White;
+            this.rbRede.Location = new System.Drawing.Point(607, 912);
+            this.rbRede.Name = "rbRede";
+            this.rbRede.Size = new System.Drawing.Size(52, 19);
+            this.rbRede.TabIndex = 157;
+            this.rbRede.TabStop = true;
+            this.rbRede.Text = "Rede";
+            this.rbRede.UseVisualStyleBackColor = true;
+            this.rbRede.CheckedChanged += new System.EventHandler(this.rbRede_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(665, 912);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(55, 19);
+            this.radioButton1.TabIndex = 158;
+            this.radioButton1.Text = "Local";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // rbLocal
+            // 
+            this.rbLocal.AutoSize = true;
+            this.rbLocal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLocal.ForeColor = System.Drawing.Color.White;
+            this.rbLocal.Location = new System.Drawing.Point(726, 931);
+            this.rbLocal.Name = "rbLocal";
+            this.rbLocal.Size = new System.Drawing.Size(55, 19);
+            this.rbLocal.TabIndex = 159;
+            this.rbLocal.Text = "Local";
+            this.rbLocal.UseVisualStyleBackColor = true;
+            this.rbLocal.CheckedChanged += new System.EventHandler(this.rbLocal_CheckedChanged);
+            // 
+            // nUDVoz
+            // 
+            this.nUDVoz.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nUDVoz.Location = new System.Drawing.Point(1735, 929);
+            this.nUDVoz.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nUDVoz.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nUDVoz.Name = "nUDVoz";
+            this.nUDVoz.Size = new System.Drawing.Size(43, 26);
+            this.nUDVoz.TabIndex = 161;
+            this.nUDVoz.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.nUDVoz.ValueChanged += new System.EventHandler(this.nUDVoz_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(1604, 933);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 19);
+            this.label5.TabIndex = 160;
+            this.label5.Text = "Velocidade da Voz";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1784, 961);
+            this.Controls.Add(this.nUDVoz);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.rbLocal);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rbRede);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.nUDTime);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBanco);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblNumeroCamera);
-            this.Controls.Add(this.txtNumeroCamera);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnAddCaixas);
             this.Controls.Add(this.lbl1);
@@ -398,6 +498,7 @@ namespace Trabalho_Camera_Caixa.Forms
             this.Text = "Video";
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDVoz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,12 +524,18 @@ namespace Trabalho_Camera_Caixa.Forms
         private System.Windows.Forms.Label lblTitulo1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.TextBox txtNumeroCamera;
         private System.Windows.Forms.Label lblNumeroCamera;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button btnBanco;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nUDTime;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RadioButton rbRede;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbLocal;
+        private System.Windows.Forms.NumericUpDown nUDVoz;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Trabalho_Camera_Caixa.Models
 {
-    public class Tb_registro_Model
+    class Combo_Model
     {
-        public int id { get; set; }
-        public string data { get; set; }
-        public string hora { get; set; }
-        public string codigo { get; set; }
+        public string valor { get; set; }
         public string nome { get; set; }
     }
 }

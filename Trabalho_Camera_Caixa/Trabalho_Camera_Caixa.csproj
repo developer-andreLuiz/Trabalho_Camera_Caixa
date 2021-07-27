@@ -75,7 +75,11 @@
     <Compile Include="Forms\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Tb_registro_Model.cs" />
+    <Compile Include="Models\Combo_Model.cs" />
+    <Compile Include="Models\Registro_Model.cs" />
+    <Compile Include="Models\Tb_Funcionario_Model.cs" />
+    <Compile Include="Models\Tb_itens_pedidos_Model.cs" />
+    <Compile Include="Models\Tb_Produtos_Model.cs" />
     <Compile Include="Service\MediaPlayerList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

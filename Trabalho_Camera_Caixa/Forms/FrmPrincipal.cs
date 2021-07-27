@@ -36,7 +36,10 @@ namespace Trabalho_Camera_Caixa.Forms
         #endregion
 
         #region Banco
-        List<Tb_registro_Model> listaRegistros = new List<Tb_registro_Model>();
+        List<Tb_Produtos_Model> listaProdutos = new List<Tb_Produtos_Model>();
+        List<Tb_Funcionario_Model> listaFuncionario = new List<Tb_Funcionario_Model>();
+        List<Tb_itens_pedidos_Model> listaItens = new List<Tb_itens_pedidos_Model>();
+        List<Registro_Model> listaRegistros = new List<Registro_Model>();
         #endregion
       
         #endregion
@@ -384,13 +387,6 @@ namespace Trabalho_Camera_Caixa.Forms
         {
             try
             {
-                int x = int.Parse(txtNumeroCamera.Text);
-                conteudo = x.ToString().Substring(0, 1);
-            }
-            catch { }
-
-            try
-            {
                 FolderBrowserDialog folder = new FolderBrowserDialog();
                 if (folder.ShowDialog() == DialogResult.OK && !string.IsNullOrWhiteSpace(folder.SelectedPath))
                 {
@@ -400,23 +396,13 @@ namespace Trabalho_Camera_Caixa.Forms
                     foreach (string nomeString in files)
                     {
                         FileInfo fi = new FileInfo(nomeString);
-
-                        //função de igual 1 
-                        if (int.Parse(conteudo) == 1)
+                        if (Path.GetFileNameWithoutExtension(fi.FullName).Substring(8, 1).Equals("_"))
                         {
-                            if (Path.GetFileNameWithoutExtension(fi.FullName).Substring(7, 2).Equals(conteudo[1] + "_"))
-                            {
-                                arquivos1.Add(new MediaPlayerList() { FileName = Path.GetFileNameWithoutExtension(fi.FullName).Substring(5, 3) + " " + Path.GetFileNameWithoutExtension(fi.FullName).Substring(22, 2) + ":" + Path.GetFileNameWithoutExtension(fi.FullName).Substring(24, 2), Path = fi.FullName });
-                            }
+                            arquivos1.Add(new MediaPlayerList() { FileName = Path.GetFileNameWithoutExtension(fi.FullName).Substring(5, 3) + " " + Path.GetFileNameWithoutExtension(fi.FullName).Substring(22, 2) + ":" + Path.GetFileNameWithoutExtension(fi.FullName).Substring(24, 2), Path = fi.FullName });
                         }
-                        else
-                        {
-                            //função de 1 digito
-                            if (Path.GetFileNameWithoutExtension(fi.FullName).Substring(7, 1).Equals(conteudo))
-                            {
-                                arquivos1.Add(new MediaPlayerList() { FileName = Path.GetFileNameWithoutExtension(fi.FullName).Substring(5, 3) + " " + Path.GetFileNameWithoutExtension(fi.FullName).Substring(22, 2) + ":" + Path.GetFileNameWithoutExtension(fi.FullName).Substring(24, 2), Path = fi.FullName });
-                            }
-                        }
+                        
+                        
+                        
                     }
                     if (arquivos1.Count>0)
                     {
@@ -444,7 +430,7 @@ namespace Trabalho_Camera_Caixa.Forms
             {
                 foreach (var a in listaRegistros)
                 {
-                    if (RetornoTime(lblTimeAtual1.Text).Equals(a.hora))
+                    if (RetornoTime(lblTimeAtual1.Text).Equals(a.hora)&&a.funcionario.Equals(comboBox1.SelectedValue.ToString()))
                     {
                         StopFala();
                         Falar(a.nome);
@@ -453,36 +439,100 @@ namespace Trabalho_Camera_Caixa.Forms
 
             }
         }
+        private void nUDVoz_ValueChanged(object sender, EventArgs e)
+        {
+            velocidade = Convert.ToInt32(nUDVoz.Value);
+        }
         #endregion
 
         #region Banco
         private void btnBanco_Click(object sender, EventArgs e)
         {
-            var lista = Banco.Tb_registro.RetornoCompleto();
-            listaRegistros = new List<Tb_registro_Model>();
-            foreach (var item in lista)
+            try
             {
-                if (item.data.Equals(dateTimePicker1.Text))
+                listaFuncionario = new List<Tb_Funcionario_Model>();
+                listaFuncionario = Banco.Tb_Funcionario.RetornoCompletoHabilitado();
+                comboBox1.DataSource = listaFuncionario;
+                comboBox1.DisplayMember = "Nome";
+                comboBox1.ValueMember = "Codigo";
+
+                listaProdutos = Banco.Tb_Produtos.RetornoCompleto();
+                var dia = DateTime.Parse(dateTimePicker1.Text).ToOADate();
+                listaItens = Banco.Tb_itens_pedidos.RetornoCompletoData(dia);
+                listaRegistros = new List<Registro_Model>();
+
+                foreach (var item in listaItens)
                 {
-                    listaRegistros.Add(item);
+                    bool add = true;
+                    Registro_Model r = new Registro_Model();
+                    try
+                    {
+                        var produto = listaProdutos[listaProdutos.FindIndex(x => x.Codigo.Equals(item.codigo))];
+
+                        if (produto.nome_camera.Length > 0)
+                        {
+                            r = new Registro_Model(item.codigo, produto.nome_camera, item.Hora, item.Codigo_funcionario);
+                        }
+                    }
+                    catch
+                    {
+                        add = false;
+                    }
+
+                    if (add)
+                    {
+                        listaRegistros.Add(r);
+                    }
+
+
                 }
+
+
+
+                if (listaRegistros.Count > 0)
+                {
+                    MessageBox.Show($"Lista carregada, tem {listaRegistros.Count} registros para esta data.", "Informação", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show($"Nehum registro para esta data.", "Informação", MessageBoxButtons.OK);
+                }
+
             }
-            if (listaRegistros.Count>0)
+            catch (Exception a)
             {
-                MessageBox.Show($"Lista carregada, tem {listaRegistros.Count} registros para esta data.","Informação", MessageBoxButtons.OK);
+
+                MessageBox.Show(a.Message);
             }
-            else
+           
+        }
+
+        private void rbRede_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Banco.conexao.State == ConnectionState.Open)
             {
-                MessageBox.Show($"Nehum registro para esta data.", "Informação", MessageBoxButtons.OK);
+                Banco.conexao.Close();
+               
             }
+            Banco.conexao.ConnectionString = Banco.caminhoRede;
+
+        }
+        private void rbLocal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Banco.conexao.State == ConnectionState.Open)
+            {
+                Banco.conexao.Close();
+
+            }
+            Banco.conexao.ConnectionString = Banco.caminhoLocal;
         }
 
 
-        #endregion
 
         #endregion
 
-       
+        #endregion
+
        
     }
 }
