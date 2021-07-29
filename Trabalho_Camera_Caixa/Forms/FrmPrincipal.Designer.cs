@@ -58,7 +58,6 @@ namespace Trabalho_Camera_Caixa.Forms
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.rbRede = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.rbLocal = new System.Windows.Forms.RadioButton();
             this.nUDVoz = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
@@ -391,24 +390,12 @@ namespace Trabalho_Camera_Caixa.Forms
             this.rbRede.UseVisualStyleBackColor = true;
             this.rbRede.CheckedChanged += new System.EventHandler(this.rbRede_CheckedChanged);
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(665, 912);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(55, 19);
-            this.radioButton1.TabIndex = 158;
-            this.radioButton1.Text = "Local";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // rbLocal
             // 
             this.rbLocal.AutoSize = true;
             this.rbLocal.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbLocal.ForeColor = System.Drawing.Color.White;
-            this.rbLocal.Location = new System.Drawing.Point(726, 931);
+            this.rbLocal.Location = new System.Drawing.Point(681, 912);
             this.rbLocal.Name = "rbLocal";
             this.rbLocal.Size = new System.Drawing.Size(55, 19);
             this.rbLocal.TabIndex = 159;
@@ -461,7 +448,6 @@ namespace Trabalho_Camera_Caixa.Forms
             this.Controls.Add(this.nUDVoz);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rbLocal);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.rbRede);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox1);
@@ -533,7 +519,6 @@ namespace Trabalho_Camera_Caixa.Forms
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RadioButton rbRede;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton rbLocal;
         private System.Windows.Forms.NumericUpDown nUDVoz;
         private System.Windows.Forms.Label label5;
